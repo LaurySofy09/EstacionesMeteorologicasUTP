@@ -1,0 +1,572 @@
+<!doctype html>
+<html class="fixed">
+	<head>
+
+		<!-- Basic -->
+		<meta charset="UTF-8">
+
+		<title>Consultar Datos</title>
+		<meta name="keywords" content="HTML5 Admin Template" />
+		<meta name="description" content="Porto Admin - Responsive HTML5 Template">
+		<meta name="author" content="okler.net">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<!-- Web Fonts  -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.css" />
+		<link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/datepicker3.css" />
+		<link rel="stylesheet" href="assets/vendor/bootstrap-timepicker/css/bootstrap-timepicker.css" />
+
+		<!-- Specific Page Vendor CSS -->
+		<link rel="stylesheet" href="assets/vendor/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.css" />
+		<link rel="stylesheet" href="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css" />
+		<link rel="stylesheet" href="assets/vendor/morris/morris.css" />
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/theme.css" />
+		
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/skins/default.css" />
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/theme-custom.css">
+
+		<!-- Head Libs -->
+		<script src="assets/vendor/modernizr/modernizr.js"></script>
+
+	</head>
+	<?php include ("session.php"); ?>
+	<body>
+		<section class="body">
+
+			<!-- start: header -->
+			<header class="header">
+				<div class="logo-container">
+					<a href="../" class="logo">
+						<img src="/Static/LogoAir2.jpg" width="50" height="47" />
+					</a>
+					<div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+					</div>
+				</div>
+			
+				<!-- start: search & user box -->
+				<div class="header-right">
+			
+					<form action="pages-search-results.html" class="search nav-form">
+						<div class="input-group input-search">
+							<input type="text" class="form-control" name="q" id="q" placeholder="Search...">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+							</span>
+						</div>
+					</form>
+			
+					<span class="separator"></span>
+			
+					<ul class="notifications">
+						<li>
+							<a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
+								<i class="fa fa-tasks"></i>
+								<span class="badge">3</span>
+							</a>
+			
+							<div class="dropdown-menu notification-menu large">
+								<div class="notification-title">
+									<span class="pull-right label label-default">3</span>
+									Tasks
+								</div>
+			
+								<div class="content">
+									<ul>
+										<li>
+											<p class="clearfix mb-xs">
+												<span class="message pull-left">Generating Sales Report</span>
+												<span class="message pull-right text-dark">60%</span>
+											</p>
+											<div class="progress progress-xs light">
+												<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+											</div>
+										</li>
+			
+										<li>
+											<p class="clearfix mb-xs">
+												<span class="message pull-left">Importing Contacts</span>
+												<span class="message pull-right text-dark">98%</span>
+											</p>
+											<div class="progress progress-xs light">
+												<div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" style="width: 98%;"></div>
+											</div>
+										</li>
+			
+										<li>
+											<p class="clearfix mb-xs">
+												<span class="message pull-left">Uploading something big</span>
+												<span class="message pull-right text-dark">33%</span>
+											</p>
+											<div class="progress progress-xs light mb-xs">
+												<div class="progress-bar" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%;"></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
+								<i class="fa fa-envelope"></i>
+								<span class="badge">4</span>
+							</a>
+			
+							<div class="dropdown-menu notification-menu">
+								<div class="notification-title">
+									<span class="pull-right label label-default">230</span>
+									Messages
+								</div>
+			
+								<div class="content">
+									<ul>
+										<li>
+											<a href="#" class="clearfix">
+												<figure class="image">
+													<img src="assets/images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle" />
+												</figure>
+												<span class="title">Joseph Doe</span>
+												<span class="message">Lorem ipsum dolor sit.</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<figure class="image">
+													<img src="assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle" />
+												</figure>
+												<span class="title">Joseph Junior</span>
+												<span class="message truncate">Truncated message. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lacinia orci. Proin vestibulum eget risus non luctus. Nunc cursus lacinia lacinia. Nulla molestie malesuada est ac tincidunt. Quisque eget convallis diam, nec venenatis risus. Vestibulum blandit faucibus est et malesuada. Sed interdum cursus dui nec venenatis. Pellentesque non nisi lobortis, rutrum eros ut, convallis nisi. Sed tellus turpis, dignissim sit amet tristique quis, pretium id est. Sed aliquam diam diam, sit amet faucibus tellus ultricies eu. Aliquam lacinia nibh a metus bibendum, eu commodo eros commodo. Sed commodo molestie elit, a molestie lacus porttitor id. Donec facilisis varius sapien, ac fringilla velit porttitor et. Nam tincidunt gravida dui, sed pharetra odio pharetra nec. Duis consectetur venenatis pharetra. Vestibulum egestas nisi quis elementum elementum.</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<figure class="image">
+													<img src="assets/images/!sample-user.jpg" alt="Joe Junior" class="img-circle" />
+												</figure>
+												<span class="title">Joe Junior</span>
+												<span class="message">Lorem ipsum dolor sit.</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<figure class="image">
+													<img src="assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle" />
+												</figure>
+												<span class="title">Joseph Junior</span>
+												<span class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lacinia orci. Proin vestibulum eget risus non luctus. Nunc cursus lacinia lacinia. Nulla molestie malesuada est ac tincidunt. Quisque eget convallis diam.</span>
+											</a>
+										</li>
+									</ul>
+			
+									<hr />
+			
+									<div class="text-right">
+										<a href="#" class="view-more">View All</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
+								<i class="fa fa-bell"></i>
+								<span class="badge">3</span>
+							</a>
+			
+							<div class="dropdown-menu notification-menu">
+								<div class="notification-title">
+									<span class="pull-right label label-default">3</span>
+									Alerts
+								</div>
+			
+								<div class="content">
+									<ul>
+										<li>
+											<a href="#" class="clearfix">
+												<div class="image">
+													<i class="fa fa-thumbs-down bg-danger"></i>
+												</div>
+												<span class="title">Server is Down!</span>
+												<span class="message">Just now</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<div class="image">
+													<i class="fa fa-lock bg-warning"></i>
+												</div>
+												<span class="title">User Locked</span>
+												<span class="message">15 minutes ago</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<div class="image">
+													<i class="fa fa-signal bg-success"></i>
+												</div>
+												<span class="title">Connection Restaured</span>
+												<span class="message">10/10/2014</span>
+											</a>
+										</li>
+									</ul>
+			
+									<hr />
+			
+									<div class="text-right">
+										<a href="#" class="view-more">View All</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+			
+					<span class="separator"></span>
+			
+					<div id="userbox" class="userbox">
+						<a href="#" data-toggle="dropdown">
+							<figure class="profile-picture">
+								<img src="assets/images/logo-utp.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="assets/images/logo-utp.jpg" />
+							</figure>
+							<?php echo '<div class="profile-info" data-lock-name="'.$nombreuser.'" data-lock-email="'.$rol.'">';
+								 echo '<span class="name">'.$nombreuser.'</span>';
+								echo '<span class="role">'.$rol.'</span>';
+								?>
+							</div>
+			
+							<i class="fa custom-caret"></i>
+						</a>
+			
+						<div class="dropdown-menu">
+							<ul class="list-unstyled">
+								<li class="divider"></li>
+								<li>
+									<a role="menuitem" tabindex="-1" href="profile.php"><i class="fa fa-user"></i> Mi Perfil</a>
+								</li>
+								<li>
+									<a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i class="fa fa-lock"></i> Bloquer Pantalla</a>
+								</li>
+								<li>
+									<a role="menuitem" tabindex="-1" href="cerrar.php"><i class="fa fa-power-off"></i> Cerrar Sesión</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- end: search & user box -->
+			</header>
+			<!-- end: header -->
+
+			<div class="inner-wrapper">
+				<!-- start: sidebar -->
+				<?php
+				include("menu-octopus.php");
+				?>				
+				<!-- end: sidebar -->
+
+				<section role="main" class="content-body">
+					<header class="page-header">
+						<h2>Mediciones por 24 horas</h2>
+					
+						<div class="right-wrapper pull-right">
+							<ol class="breadcrumbs">
+								<li>
+									<a href="index.php">
+										<i class="fa fa-home"></i>
+									</a>
+								</li>
+								<li><span>Mediciones</span></li>
+								<li><span>Vista Tabulada</span></li>
+								<li><span>24 horas</span></li>
+							</ol>
+					
+							<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+						</div>
+					</header>
+
+					<!-- start: page -->
+
+								<?php
+								@$pag = 3;
+								@$buscar = $_POST["buscar"];
+								if(@$buscar)
+								{
+									$estacion = intval($_POST["estacion"]);
+									if ($estacion == 0) {
+										$estacion="";
+									}
+									$agente = intval($_POST["agente"]);
+									if ($agente==0) {
+										$agente="";
+									}
+									$fecha_start = $_POST["fecha_start"];
+									$fecha_end = $_POST["fecha_end"];
+									$hora_start = $_POST["hora_start"];
+									$hora_end = $_POST["hora_end"];
+									if (($fecha_start) AND ($fecha_end) AND ($hora_end) AND ($hora_start))
+									{
+										$fecha_start2 = date_format(date_create($fecha_start." ".$hora_start), "Y-m-d H:i:s");
+										$fecha_end2 = date_format(date_create($fecha_end." ".$hora_end), "Y-m-d H:i:s");
+									}
+									else
+									{
+										$fecha_start2 = $fecha_start." ".$hora_start;
+										$fecha_end2 = $fecha_end." ".$hora_end;
+									}
+									//echo $estacion.", ".$agente.", ".$fecha_start.", ".$fecha_end;
+									$resultado3=funciones::consultarFiltro4($estacion,$agente,$fecha_start2,$fecha_end2);
+									//echo $estacion.", ".$agente.", ".$fecha_start.", ".$fecha_end;
+								}
+								?>
+								
+								<section class="panel">
+									<header class="panel-heading">
+										<div class="panel-actions">
+											<a href="#" class="fa fa-caret-down"></a>
+											<a href="#" class="fa fa-times"></a>
+										</div>
+						
+										<h2 class="panel-title">Consultar</h2>
+									</header>
+									<div class="panel-body">
+												<form id="form_vistatab" class="form-horizontal form-bordered" method="post" action="consulta-filtro4.php" autocomplete="off">
+														<div class="panel-body">
+															<div class="row">
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<label class="col-md-2 control-label" for="inputSuccess">Estación</label>
+																		<div class="col-md-7">
+																			<select class="form-control mb-md" name="estacion" required>
+																				<option selected>--Seleccione una estación--</option>
+																				<?php
+																					$resultado=funciones::consultarEstacion();
+																					foreach ($resultado as $row) {
+																						if (@$estacion == intval($row['ID'])) {
+																							echo '<option selected>'.$row['ID']." - ".$row['DESCRIPCION'].'</option>';
+																						}
+																						else
+																						{
+																							echo '<option>'.$row['ID']." - ".$row['DESCRIPCION'].'</option>';
+																						}																				
+																					}
+																				?>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<label class="col-md-2 control-label" for="inputSuccess">Agente</label>
+																		<div class="col-md-6">
+																			<select class="form-control mb-md" name="agente" required>
+																				<option selected>--Seleccione un agente--</option>
+																				<?php
+																					$resultado2=funciones::consultarAgente();
+																					foreach ($resultado2 as $row) {
+																						if (@$agente == intval($row['ID']))
+																						{
+																							echo '<option selected>'.$row['ID']." - ".$row['NOMENCLATURA'].'</option>';
+																						}
+																						else
+																						{
+																							echo '<option>'.$row['ID']." - ".$row['NOMENCLATURA'].'</option>';
+																						}
+																					}
+																				?>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<label class="col-md-2 control-label">Fecha</label>
+																		<div class="col-md-9">
+																			<div class="input-daterange input-group" data-plugin-datepicker >
+																				<span class="input-group-addon">
+																					<i class="fa fa-calendar"></i>
+																				</span>
+																				<?php
+																				echo '<input type="text" class="form-control" name="fecha_start" value='.@$fecha_start .'>';
+																				echo'<span class="input-group-addon">a</span>';
+																				echo'<input type="text" class="form-control" name="fecha_end" value='.@$fecha_end.'>';
+																				?>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<label class="col-md-2 control-label">Hora</label>
+																		<div class="col-md-8">
+																			<div class="input-group">
+																				<?php
+																				echo '<input type="time" class="form-control" id="inputDefault" step="600" name="hora_start" value='.@$hora_start.'>';
+																				echo '<span class="input-group-addon">a</span>';
+																				echo '<input type="time" class="form-control" id="inputDefault" step="600" name="hora_end" value='.@$hora_end.'>';
+																				?>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<button type="submit" class="mb-xs mt-xs mr-xs btn btn-default col-md-offset-5" name="buscar" value="1">Buscar</button>
+														<?php echo '<input type="hidden" name="fecha_start2" value='.@$fecha_start2.'>';
+														echo '<input type="hidden" name="fecha_end2" value='.@$fecha_end2.'>';
+														?>
+												</form>
+												
+												<?php
+												if(@$resultado3)
+												{
+												echo '<div class="table-responsive">
+													<table class="table table-hover mb-none">';
+														
+														@$num;
+														echo "<thead>";
+															echo "<tr>";
+																echo "<th>#</th>";
+																echo "<th>Estación</th>";
+																echo "<th>Agente</th>";
+																echo "<th>Valor</th>";
+																echo "<th>Fecha y Hora</th>";
+																echo "<th>Calidad del aire</th>";
+															echo "</tr>";
+														echo "</thead>";
+														if(@$resultado3)
+														{
+														echo "<tbody>";
+															foreach ($resultado3 as $row) {
+															echo "<tr>";
+																@$num++;
+																echo "<td>".@$num."</td>";
+																echo "<td>".$row['DESCRIPCION']."</td>";
+																echo "<td>".$row['NOMENCLATURA']."</td>";
+																echo "<td>".$row['PROMEDIO']."</td>";
+																echo "<td>".$row['FECHA']."</td>";
+																include("categoria.php");
+															echo "</tr>";
+															}
+														echo "</tbody>";
+														}
+														
+														
+													echo "</table>
+													<form method='post'>
+														<button type='submit' class='mb-xs mt-xs mr-xs btn btn-default col-md-offset-5' name='crear_informe' value='1' formaction='informes.php' formtarget='_blank' form='form_vistatab'>Crear Informe</button>	
+													</form>";
+												}
+												?>
+
+									</div>
+								</section>
+						
+					<!-- end: page -->
+				</section>
+			</div>
+
+			<aside id="sidebar-right" class="sidebar-right">
+				<div class="nano">
+					<div class="nano-content">
+						<a href="#" class="mobile-close visible-xs">
+							Collapse <i class="fa fa-chevron-right"></i>
+						</a>
+			
+						<div class="sidebar-right-wrapper">
+			
+							<div class="sidebar-widget widget-calendar">
+								<h6>Upcoming Tasks</h6>
+								<div data-plugin-datepicker data-plugin-skin="dark" ></div>
+			
+								<ul>
+									<li>
+										<time datetime="2014-04-19T00:00+00:00">04/19/2014</time>
+										<span>Company Meeting</span>
+									</li>
+								</ul>
+							</div>
+			
+							<div class="sidebar-widget widget-friends">
+								<h6>Friends</h6>
+								<ul>
+									<li class="status-online">
+										<figure class="profile-picture">
+											<img src="assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+										</figure>
+										<div class="profile-info">
+											<span class="name">Joseph Doe Junior</span>
+											<span class="title">Hey, how are you?</span>
+										</div>
+									</li>
+									<li class="status-online">
+										<figure class="profile-picture">
+											<img src="assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+										</figure>
+										<div class="profile-info">
+											<span class="name">Joseph Doe Junior</span>
+											<span class="title">Hey, how are you?</span>
+										</div>
+									</li>
+									<li class="status-offline">
+										<figure class="profile-picture">
+											<img src="assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+										</figure>
+										<div class="profile-info">
+											<span class="name">Joseph Doe Junior</span>
+											<span class="title">Hey, how are you?</span>
+										</div>
+									</li>
+									<li class="status-offline">
+										<figure class="profile-picture">
+											<img src="assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+										</figure>
+										<div class="profile-info">
+											<span class="name">Joseph Doe Junior</span>
+											<span class="title">Hey, how are you?</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+			
+						</div>
+					</div>
+				</div>
+			</aside>
+		</section>
+
+		<!-- Vendor -->
+		<script src="assets/vendor/jquery/jquery.js"></script>
+		<script src="assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+		<script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+		<script src="assets/vendor/nanoscroller/nanoscroller.js"></script>
+		<script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+		<script src="assets/vendor/magnific-popup/magnific-popup.js"></script>
+		<script src="assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+
+		<!-- Specific Page Vendor -->
+		<script src="assets/vendor/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="assets/javascripts/theme.js"></script>
+		
+		<!-- Theme Custom -->
+		<script src="assets/javascripts/theme.custom.js"></script>
+		
+		<!-- Theme Initialization Files -->
+		<script src="assets/javascripts/theme.init.js"></script>
+
+	</body>
+</html>
