@@ -1,0 +1,36 @@
+body
+{
+	background-image: url(assets/images/fondo-utp.jpg);
+	background-size: cover;
+	height:;
+}
+h2
+{
+	text-align: center;
+	border-bottom: 1px solid gray;
+}
+.border
+{
+	border-bottom: 1px solid gray;
+}
+table, th, td
+{
+	border: 1px solid black;
+  	border-collapse: collapse;
+}
+.header .logo-container {
+		height: 60px;
+		left: 0;
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 99;
+	}
+.header .logo {
+	float: left;
+	margin: 10px 0 0 15px;
+}
+
+.header .logo img {
+	color: transparent;
+}
